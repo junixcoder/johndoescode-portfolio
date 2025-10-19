@@ -1,0 +1,262 @@
+:root {
+    --primary: #0078d7;
+    --primary-dark: #005a9e;
+    --text: #222222;
+    --accent: #e2e8f0;
+    --heading-font: "Poppins", sans-serif;
+    --bod-font: "Inter", sans-serif;
+}
+
+body {
+    font-family: vary(--body-font);
+    margin: 0;
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    color: var(--text);
+    line-height: 1.6;
+    background: url("../assets/bgs/bgimage1a.jpg") no-repeat center center / cover;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 1rem;
+}
+
+.hero-container {
+    width: 1100px;
+    height: 300px;
+    margin: auto;
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 5%;
+    float: left;
+}
+
+.site-header {
+    width: 1100px;
+    background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    padding: 0;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #151817;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: cornflowerblue;
+}
+
+.hero {
+    padding: 2rem 0;
+}
+
+accent {
+    color: cadetblue;
+}
+
+.projects .filters {
+    margin-bottom: 1rem;
+}
+
+.filters button {
+    margin-bottom: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.filters button:hover {
+    color: #fff;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+.project-card {
+    background: rgba(228, 228, 228, 0.98);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.project-card img {
+    height: 100px;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+
+/* Formatting for services card section/content */
+.service-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.service-card {
+    background: rgba(215, 215, 215, 0.98);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Formatting for skillset card section/content */
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.skills-card {
+    background: rgba(215, 215, 215, 0.98);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Formatting for lightbox */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+.lightbox.hidden {
+    display: none;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    user-select: none;
+}
+
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+
+/* Formatting for section */
+.section {
+    width: 1100px;
+    height: 350px;
+    margin: auto;
+    border-radius: 1px;
+    overflow: hidden;
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    backdrop-filter: brightness(1);
+    transition:
+        transform 1s ease,
+        opacity 1s ease;
+}
+
+.section-title {
+    flex: 0 0 auto;
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.section-content {
+    flex: 1;
+    opacity: 0;
+    transform: translateX(100%);
+    transition:
+        transform 0.6s ease,
+        opacity 0.6s ease;
+    padding: 20px;
+}
+
+/* Animation format for when section is activated (displayed) */
+.section.active .section-title {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    width: 60px;
+    background: #0078d7;
+    color: antiquewhite;
+    border-right: 2px solid #005a9e;
+}
+
+.section.active .section-content {
+    opacity: 1;
+    transform: translateX(0);
+}
