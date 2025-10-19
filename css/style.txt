@@ -1,0 +1,1 @@
+Documentation for changes to style.css file.
