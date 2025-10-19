@@ -1,0 +1,44 @@
+/* PROJECT OVERVIEW */
+
+/* INSTRUCTIONS for running locally */
+
+To run this webpage/app locally, please read and follow instructions on this readme.txt file.
+1. Extract the files included in the zip file named portfolioproject.zip
+2. Open the index.html file using your preferred browser e.g. google chrome or Firefox.
+3. To change and customize the contents of this project such as the Profile Name, Profile Picture, Paragraphs, etc.
+    You can edit the desired content on the corresponding elements in the index.html file.
+4. To change the images of the lightboxModal, please update the entries of the gallery display on the javascript file manually.
+5. Make sure that the links on the javascript points correctly to the desired images to be used.
+
+
+Structure of the webpage directories and files.
+Portfolio Project (Main directory) 
+    index.html 
+    read.txt 
+    assets (2nd level directory)
+        Profile (3rd level directory)
+            ProfilePicture.png
+        project1 (3rd level directory)
+            images*.png
+        project2 (3rd level directory)
+            images*.png
+        project3 (3rd level directory)
+            images*.png
+    css (2nd level directory)
+        style.css 
+    scripts (2nd level directory)
+        scripts.js
+
+/* DESCRIPTION OF THE FEATURES IMPLEMENTED */
+    Hover Effect
+    Lightbox
+    Slideshow
+    Animation
+
+/* DETAILS OF THE TECHNOLOGIES USED */
+
+Project was coded using the Phoenix Code, an open source coding application. 
+Testing done on Desktop and mobile device using the chrome browser.
+Project and associated project samples are uploaded to Github public repositories.
+
+/* SEO STRATEGIES IMPLEMENTED */
