@@ -1,1 +1,4 @@
 Documentation for assets inventory(eg. images, audios, videos).
+
+Directories 6
+Images
