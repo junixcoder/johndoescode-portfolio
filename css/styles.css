@@ -1,3 +1,5 @@
+/* Coded and Documented by John Does Code*/
+/* Main Formatting */
 :root {
     --primary: #0078d7;
     --primary-dark: #005a9e;
@@ -57,7 +59,8 @@ body {
 .nav ul {
     list-style: none;
     display: flex;
-    gap: 3rem;
+    gap: 1.5rem;
+    margin: 0;
     padding: 0;
 }
 
@@ -95,6 +98,7 @@ accent {
     color: #fff;
 }
 
+/* Formatting for project cards & content */
 .project-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -116,7 +120,6 @@ accent {
     cursor: pointer;
 }
 
-
 /* Formatting for services card section/content */
 .service-list {
     display: grid;
@@ -133,7 +136,6 @@ accent {
         transform 0.3s ease,
         box-shadow 0.3s ease;
 }
-
 
 /* Formatting for skillset card section/content */
 .skills-list {
@@ -168,8 +170,8 @@ accent {
 .lightbox-content {
     margin: auto;
     display: block;
-    max-width: 90%;
-    max-height: 80%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .lightbox.hidden {
@@ -253,10 +255,141 @@ accent {
     width: 60px;
     background: #0078d7;
     color: antiquewhite;
-    border-right: 2px solid #005a9e;
+    border-right: 1px solid #005a9e;
 }
 
 .section.active .section-content {
     opacity: 1;
     transform: translateX(0);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* === Mobile Responsive Menu === */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+}
+
+.nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #111;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.nav-links.active {
+    display: flex;
+    animation: slideDown 0.3 ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-links ul {
+    flex-direction: column;
+    width: 100%;
+}
+
+.nav-links li {
+    margin: 0.5rem 0;
+}
+
+/* Other Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+        padding: 0 1rem;
+        line-height: 1.6;
+    }
+
+    header,
+    main,
+    section {
+        display: grid;
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .Tskill img {
+        width: 60px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .Experience .Project .Skills .About .Contact {
+        display: grid;
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-card .skills-card .project-card {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        width: 90%;
+        margin: 0 auto 2rem;
+    }
+
+    section {
+        margin: 2rem 0;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 17px;
+        padding: 0 2rem;
+    }
+ 
+    .Experience .Project .Skills .About .Contact {
+        display: grid;
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-card .skills-card .project-card {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        width: 90%;
+        margin: 0 auto 2rem;
+    }
+}
+
+/* Buttons, images and links tap-enabled */
+button,
+a {
+    touch-action: manipulation;
+    min-height: 44px;
 }
