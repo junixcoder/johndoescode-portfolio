@@ -1,24 +1,45 @@
-//Coded and documented by: jnxcoder
-// Animation for sections, animation includes hiding and displaying section content
+//Coded and documented by: John Does Code
+//
+//
+// script for Hamburger Menu Toggle 
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+const navItems = document.querySelectorAll('.nav-links a');
+// Toggle mennu opem/close
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+
+// Applicable to mobile devices only, will auto close menu
+navItems.forEach(link => {
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 768) {
+            navLinks.classList.remove('active');
+        }
+    });
+});
+
+// script for animation for sections, animation includes hiding and displaying section content
 const sections = document.querySelectorAll(".section");
 
 sections.forEach((section) => {
     const title = section.querySelector(".section-title");
     title.addEventListener("click", () => {
-        // If section is already active, close it upon clicking
+//    If section is already active, close it upon clicking
         if (section.classList.contains("active")) {
             section.classList.remove("active");
         } else {
             // Close all other sections
             sections.forEach((s) => s.classList.remove("active"));
-            //Open the clicked section
+            // Open the clicked section
             section.classList.add("active");
         }
     });
 });
 
+
 // Lightbox, manually edit the gallery entries to display additional items
-// Make sure to specify the full path and correct filename. 
+// Make sure to specify the full path and correct filename.
 let currentGallery = [];
 let currentIndex = 0;
 
@@ -68,6 +89,11 @@ function closeLightbox() {
     document.getElementById("lightboxModal").style.display = "none";
 }
 
+// This function is for showing the images in lightbox
+function showImage() {
+    document.getElementById("lightboxImage").src = currentGallery[currentIndex];
+}
+
 // This function is for slideshow control
 function changeSlide(step) {
     currentIndex += step;
@@ -76,10 +102,14 @@ function changeSlide(step) {
     showImage();
 }
 
-// This function is for showing the images in lightbox
-function showImage() {
-    document.getElementById("lightboxImage").src = currentGallery[currentIndex];
-}
+// Adding keyboard control
+document.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowRight") {
+        changeSlide(1);
+    } else if (event.key === "ArrowLeft") {
+        changeSlide(-1);
+    }
+});
 
 // Autoloading images from gallery
 window.onload = () => {
