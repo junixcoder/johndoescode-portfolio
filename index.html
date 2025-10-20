@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <!-- meta for enabling the web app to be viewable in any device such as desktop or tablet -->
-        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
         <title>John Does Code - Web Developer | Portfolio</title>
         <!-- Basic SEO Tags & keywords insert here-->
         <meta
@@ -13,18 +13,56 @@
             content="John Does Code, web developer, portfolio, html coder, css design, java script, MySQL, Github Pages, Netlify, developer projects, web page publishing" />
         <meta name="author" content="John Does Code" />
 
+        <!-- Robots & Crawlers -->
+        <meta name="robots" content="index, follow" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow" />
+
+        <!-- SEO Tags Open Graph / Facebook -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="John Does Code | Web Developer" />
+        <meta
+            property="og:description"
+            content="Portfolio of John Does Code - showcasing web development projects, skills and contact information." />
+        <meta property="og:url" content="https://johndoescode.netlify.app" />
+        <meta property="og:image" content="https://johndoescode.netlify.app/assets/profile/profile.jpg" />
+
+        <!-- SEO tags Twitter Card-->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="John Does Code | Web Developer" />
+        <meta
+            name="twitter:description"
+            content="Check out my web developer portfolio built with html, css & java script." />
+        <meta name="twitter:image" content="https://johndoescode.netlify.app/assets/profile/profile.jpg" />
+        <meta name="twitter:creator" content="@johndoescode" />
+
         <!-- CSS file inside css directory -->
         <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
         <!-- Header -->
         <header class="site-header">
+            <!-- Hamburger Button -->
+            <div class="hamburger">
+                <button class="menu-toggle" aria-label="Toggle Menu">&#x2630;</button>
+                <nav class="nav-links">
+                    <ul>
+                        <li><a href="#Brand">John Does Code</a></li>
+                        <li><a href="#Experience">What I've worked on</a></li>
+                        <li><a href="#Project">Snippets of Project Codes</a></li>
+                        <li><a href="#Skills">My Tech Stack</a></li>
+                        <li><a href="#About">What Drives Me</a></li>
+                        <li><a href="#Contact">Let's Connect</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- header menu-->
             <div class="container">
                 <nav class="nav">
                     <ul>
                         <li><a href="#Brand">John Does Code</a></li>
-                        <li><a href="#experience">What I've worked on</a></li>
-                        <li><a href="#project">Snippets of Project Codes</a></li>
+                        <li><a href="#Experience">What I've worked on</a></li>
+                        <li><a href="#Project">Snippets of Project Codes</a></li>
                         <li><a href="#Skills">My Tech Stack</a></li>
                         <li><a href="#About">What Drives Me</a></li>
                         <li><a href="#Contact">Let's Connect</a></li>
@@ -37,7 +75,7 @@
         <main id="main">
             <div class="hero-container" id="Brand">
                 <div>
-                    <img src="assets/Profile/profileholder1.png" width="200" height="300" />
+                    <img src="assets/profile/profileholder1.png" width="200" height="300" />
                 </div>
                 <div class="text">
                     <h1>Hello! My name is John.</h1>
@@ -49,7 +87,7 @@
                 </div>
             </div>
             <!-- Experience Section (Animated) -->
-            <div class="section" id="experience">
+            <div class="section" id="Experience">
                 <div class="section-title">What I've worked on</div>
                 <div class="section-content">
                     <div class="service-list">
@@ -98,7 +136,7 @@
                 </div>
             </div>
             <!-- Projects Section (Animated) -->
-            <div class="section" id="project">
+            <div class="section" id="Project">
                 <div class="section-title">Snippets of Project Codes</div>
                 <div class="section-content">
                     <div class="project-list">
@@ -190,15 +228,16 @@
                         I'm always open to new opportunities, collaborations, or just chatting about web development and
                         creative ides. <br />Let's connect!
                     </h3>
-                    <h4>Email: <a href="mailto:johndoe@example.com">johndoe@example.com </a></h4>
+                    <h4>Email: <a href="mailto:johndoecode@example.com">johndoescode@example.com </a></h4>
                     <h4>Phone: +1 800-1234-56789</h4>
+                    <h4>Portfolio: <a href="https://johndoescode.netlify.app/">johndoescode.netlify.app</a></h4>
                 </div>
             </div>
         </main>
         <!-- Footer details (static) -->
         <footer class="site-footer">
             <div class="container">
-                <p>&copy; <span id="year"></span> John Doe</p>
+                <p>&copy; <span id="year"></span> John Does Code</p>
             </div>
         </footer>
 
