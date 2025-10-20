@@ -360,11 +360,6 @@ body {
     line-height: 1.6;
 }
 
-header,
-main {
-    display: grid;
-    text-align: center;
-}
 
 .section {
     width: 100%;
