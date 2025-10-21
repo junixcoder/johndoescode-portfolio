@@ -6,7 +6,7 @@
     --text: #222222;
     --accent: #e2e8f0;
     --heading-font: "Poppins", sans-serif;
-    --bod-font: "Inter", sans-serif;
+    --body-font: "Inter", sans-serif;
 }
 
 body {
@@ -26,11 +26,12 @@ body {
     max-width: 100%;
     margin: auto;
     padding: 1rem;
+    background: #e6ebff;
 }
 
 .hero-container {
     width: 100%;
-    height: 300px;
+    height: 100%;
     margin: auto;
     border-radius: 1px;
     display: flex;
@@ -71,7 +72,7 @@ body {
 }
 
 nav a:hover {
-    color: cornflowerblue;
+    color: #43769d;
 }
 
 .hero {
@@ -237,6 +238,10 @@ accent {
     position: relative;
 }
 
+.section-title:hover {
+    color: #43769d;
+}
+
 .section-content {
     flex: 1;
     opacity: 0;
@@ -254,7 +259,7 @@ accent {
     transform: rotate(180deg);
     width: 60px;
     background: #0078d7;
-    color: antiquewhite;
+    color: #fff;
     border-right: 1px solid #005a9e;
 }
 
@@ -266,12 +271,12 @@ accent {
 .menu-toggle {
     display: none;
     font-size: 1.8rem;
-    background: none;
+    background-color: none;
     color: #fff;
     cursor: pointer;
 }
 
-/* === Mobile Responsive Menu === */
+/* === Mobile responsive menu === */
 @media (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -299,7 +304,6 @@ accent {
 .nav-links a {
     text-decoration: none;
     color: #151817;
-    text-align: left;
     transition: color 0.3s;
 }
 
@@ -330,7 +334,7 @@ accent {
 
 .section {
     width: 100%;
-    height: 100%;
+    height: 100px;
     margin: 0;
     text-align: left;
     border-radius: 1px;
@@ -343,25 +347,7 @@ accent {
         opacity 1s ease;
 }
 
-/* Other Responsive adjustments */
-@media (max-width: 600px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .container {
-        display: none;
-    }
-}
-
-body {
-    font-size: 16px;
-    padding: 0 1rem;
-    line-height: 1.6;
-}
-
-
-.section {
+.section.active {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -374,96 +360,4 @@ body {
     transition:
         transform 1s ease,
         opacity 1s ease;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.Tskill img {
-    width: 60px;
-}
-
-nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.Experience .Project .Skills .About .Contact {
-    display: grid;
-    width: 100%;
-    margin-bottom: 1.5rem;
-}
-
-.service-card .skills-card .project-card {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
-    width: 90%;
-    margin: 0 auto 2rem;
-}
-
-.section {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    text-align: left;
-    border-radius: 1px;
-    overflow: hidden;
-    display: flex;
-    position: relative;
-    backdrop-filter: brightness(1);
-    transition:
-        transform 1s ease,
-        opacity 1s ease;
-}
-
-@media (min-width: 601px) and (max-width: 1024px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .container {
-        display: none;
-    }
-}
-
-body {
-    font-size: 17px;
-    padding: 0 2rem;
-}
-.section {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    text-align: left;
-    border-radius: 1px;
-    overflow: hidden;
-    display: flex;
-    position: relative;
-    backdrop-filter: brightness(1);
-    transition:
-        transform 1s ease,
-        opacity 1s ease;
-}
-.Experience .Project .Skills .About .Contact {
-    display: grid;
-    width: 100%;
-    margin-bottom: 1.5rem;
-}
-.service-card .skills-card .project-card {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
-    width: 90%;
-    margin: 0 auto 2rem;
-}
-/* Buttons, images and links tap-enabled */
-button,
-a {
-    touch-action: manipulation;
-    min-height: 47px;
 }
