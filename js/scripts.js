@@ -1,20 +1,20 @@
 //Coded and documented by: John Does Code
 //
 //
-// script for Hamburger Menu Toggle 
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-const navItems = document.querySelectorAll('.nav-links a');
-// Toggle mennu opem/close
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+
+// Script for Hamburger Menu Toggle
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const navItems = document.querySelectorAll(".nav-links a");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
 });
 
-// Applicable to mobile devices only, will auto close menu
-navItems.forEach(link => {
-    link.addEventListener('click', () => {
+navItems.forEach((link) => {
+    link.addEventListener("click", () => {
         if (window.innerWidth <= 768) {
-            navLinks.classList.remove('active');
+            navLinks.classList.remove("active");
         }
     });
 });
@@ -25,7 +25,7 @@ const sections = document.querySelectorAll(".section");
 sections.forEach((section) => {
     const title = section.querySelector(".section-title");
     title.addEventListener("click", () => {
-//    If section is already active, close it upon clicking
+        //    If section is already active, close it upon clicking
         if (section.classList.contains("active")) {
             section.classList.remove("active");
         } else {
@@ -36,7 +36,6 @@ sections.forEach((section) => {
         }
     });
 });
-
 
 // Lightbox, manually edit the gallery entries to display additional items
 // Make sure to specify the full path and correct filename.
