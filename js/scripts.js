@@ -4,35 +4,86 @@
 
 // Script for Hamburger Menu Toggle
 const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-const navItems = document.querySelectorAll(".nav-links a");
+const navContainer = document.querySelector(".nav-links");
+const navLinkItems = document.querySelectorAll(".nav-links a");
+const navContainer2 = document.querySelector(".nav");
+const navLinkItems2 = document.querySelectorAll(".nav a");
 
 menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+    navContainer.classList.toggle("active");
 });
 
-navItems.forEach((link) => {
+navLinkItems.forEach((link) => {
     link.addEventListener("click", () => {
         if (window.innerWidth <= 768) {
-            navLinks.classList.remove("active");
+            navContainer.classList.remove("active");
         }
     });
 });
 
-// script for animation for sections, animation includes hiding and displaying section content
+navLinkItems2.forEach((link) => {
+    link.addEventListener("click", () => {
+        if (window.innerWidth > 768) {
+            navContainer2.classList.remove("active");
+        }
+    });
+});
+
+// === Section & Nav behavior ==
+
 const sections = document.querySelectorAll(".section");
 
 sections.forEach((section) => {
     const title = section.querySelector(".section-title");
-    title.addEventListener("click", () => {
-        //    If section is already active, close it upon clicking
-        if (section.classList.contains("active")) {
-            section.classList.remove("active");
-        } else {
-            // Close all other sections
-            sections.forEach((s) => s.classList.remove("active"));
-            // Open the clicked section
-            section.classList.add("active");
+
+    if (title) {
+        title.addEventListener("click", () => {
+            section.classList.toggle("active");
+
+            const link = document.querySelector(`.nav-link[href="#${section.id}"]`);
+            if (link) {
+                if (section.classList.contains("active")) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            }
+        });
+    }
+});
+
+navLinkItems.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const targetID = link.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetID);
+
+        if (targetSection) {
+            targetSection.classList.add("active");
+
+            navLinkItems.forEach((l) => l.classList.remove("active"));
+            link.classList.add("active");
+
+            targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    });
+});
+
+navLinkItems2.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        const targetID = link.getAttribute("href").substring(1);
+        const targetSection = document.getElementById(targetID);
+
+        if (targetSection) {
+            targetSection.classList.add("active");
+
+            navLinkItems2.forEach((l) => l.classList.remove("active"));
+            link.classList.add("active");
+
+            targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     });
 });
@@ -42,40 +93,42 @@ sections.forEach((section) => {
 let currentGallery = [];
 let currentIndex = 0;
 
+// Galleries with src + alt
 const galleries = {
     gallery1: [
-        "assets/project1/img1.png",
-        "assets/project1/img2.png",
-        "assets/project1/img3.png",
-        "assets/project1/img4.png"
+        { src: "assets/project1/img1.png", alt: "Homepage preview of To-do App Project" },
+        { src: "assets/project1/img2.png", alt: "Snippets of html code for To-do App Project" },
+        { src: "assets/project1/img3.png", alt: "Snippets of css code for To-do App Project" },
+        { src: "assets/project1/img4.png", alt: "Snippets of jsript code for To-do App Project" }
     ],
     gallery2: [
-        "assets/project2/img1.png",
-        "assets/project2/img2.png",
-        "assets/project2/img3.png",
-        "assets/project2/img4.png"
+        { src: "assets/project2/img1.png", alt: "Homepage preview of Weather App Project" },
+        { src: "assets/project2/img2.png", alt: "Snippets of html code for Weather App Project" },
+        { src: "assets/project2/img3.png", alt: "Snippets of css code for Weather App Project" },
+        { src: "assets/project2/img4.png", alt: "Snippets of jsript code for Weather App Project" }
     ],
     gallery3: [
-        "assets/project3/img1.png",
-        "assets/project3/img2.png",
-        "assets/project3/img3.png",
-        "assets/project3/img4.png",
-        "assets/project3/img5.png"
+        { src: "assets/project3/img1.png", alt: "Homepage preview of Blog Site Project" },
+        { src: "assets/project3/img2.png", alt: "Snippets of html code for Blog Site Project" },
+        { src: "assets/project3/img3.png", alt: "Snippets of css code for Blog Site Project" },
+        { src: "assets/project3/img4.png", alt: "Snippets of jscript for code Blog Site Project" },
+        { src: "assets/project3/img5.png", alt: "Snippets of json code for Blog Site Project" }
     ]
 };
 
-// This function displays only the first image of the gallery as thumbnail and will open the lightbox upon click
+// Display only the first image of each gallery as thumbnail
 function loadGalleryThumbnail(galleryId, images) {
     const galleryDiv = document.getElementById(galleryId);
     if (images.length > 0) {
         const thumb = document.createElement("img");
-        thumb.src = images[0];
+        thumb.src = images[0].src;
+        thumb.alt = images[0].alt;
         thumb.onclick = () => openLightbox(images, 0);
         galleryDiv.appendChild(thumb);
     }
 }
 
-// This function opens the lightbox & slideshow
+// Open the lightbox & slideshow
 function openLightbox(images, index) {
     currentGallery = images;
     currentIndex = index;
@@ -83,17 +136,25 @@ function openLightbox(images, index) {
     showImage();
 }
 
-// This function closes the lightbox
+// Close the lightbox
 function closeLightbox() {
     document.getElementById("lightboxModal").style.display = "none";
 }
 
-// This function is for showing the images in lightbox
+// Show image in lightbox + alt caption
 function showImage() {
-    document.getElementById("lightboxImage").src = currentGallery[currentIndex];
+    const imageElement = document.getElementById("lightboxImage");
+    const captionElement = document.getElementById("lightboxCaption"); // 🆕 caption element
+    const currentImage = currentGallery[currentIndex];
+
+    imageElement.src = currentImage.src;
+    imageElement.alt = currentImage.alt;
+
+    // 🆕 Display alt text below image
+    captionElement.textContent = currentImage.alt || "";
 }
 
-// This function is for slideshow control
+// Slideshow controls
 function changeSlide(step) {
     currentIndex += step;
     if (currentIndex < 0) currentIndex = currentGallery.length - 1;
@@ -101,7 +162,7 @@ function changeSlide(step) {
     showImage();
 }
 
-// Adding keyboard control
+// Keyboard controls
 document.addEventListener("keydown", function (event) {
     if (event.key === "ArrowRight") {
         changeSlide(1);
@@ -110,7 +171,7 @@ document.addEventListener("keydown", function (event) {
     }
 });
 
-// Autoloading images from gallery
+// Autoload gallery thumbnails on page load
 window.onload = () => {
     loadGalleryThumbnail("gallery1", galleries.gallery1);
     loadGalleryThumbnail("gallery2", galleries.gallery2);
