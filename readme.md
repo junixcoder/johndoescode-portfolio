@@ -52,16 +52,16 @@ To run this webpage locally, please read and follow instructions on this readme.
 # Technologies used
 
 -   Project was coded using Phoenix Code, an open source coding application.
-    -   [Phoenix Code](https://phcode.io/)
+    -   [Phoenix Code](https://phcode.io/) 🔗
 -   Testing done on Desktop and mobile device using the chrome browser.
 -   Project and associated project samples are uploaded to Github public repositories.
-    -   [Portfolio Project](https://github.com/junixcoder/johndoescode-portfolio.git)
+    -   [Portfolio Project](https://github.com/junixcoder/johndoescode-portfolio.git) 🔗
     -   Showcased Projects
-        1. [To-do Web App Project](https://github.com/junixcoder/todo-app.github.io.git)
-        2. [Weather Update App Project](https://github.com/junixcoder/weather-app.github.io.git)
-        3. [Blog Site Project](https://github.com/junixcoder/johndoescode-blog.github.io.git)
+        1. [To-do Web App Project](https://github.com/junixcoder/todo-app.github.io.git) 🔗
+        2. [Weather Update App Project](https://github.com/junixcoder/weather-app.github.io.git) 🔗
+        3. [Blog Site Project](https://github.com/junixcoder/johndoescode-blog.github.io.git) 🔗
 -   Project published on Netlify
-    -   [Portfolio Live Site](https://johndoescode.netlify.app/)
+    -   [Portfolio Live Site](https://johndoescode.netlify.app/) 🔗
 
 # SEO strategies implemented
 
@@ -71,3 +71,4 @@ To run this webpage locally, please read and follow instructions on this readme.
 -   Implement robot.txt and sitemap.xml files.
 -   SEO meta tags for Open Graph / Facebook.
 -   SEO meta tags for Twitter.
+
