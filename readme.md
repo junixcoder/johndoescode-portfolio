@@ -6,14 +6,14 @@ integrated SEO optimization. Also designed to demonstrate coding abilities and u
 practices.
 
 # ✨Project Tree
-📂root
-   -index.html
-   -readme.md
-   -robot.txt
-   -sitemap.xml
-   📂assets
-   📂css
-   📂js
+📂root  
+   -index.html  
+   -readme.md  
+   -robot.txt  
+   -sitemap.xml  
+   📂 assets  
+   📂css  
+   📂js  
 
 # ✨Instructions for running the project locally
 
@@ -81,6 +81,7 @@ To run this webpage locally, please read and follow instructions on this readme.
 -   Implement robot.txt and sitemap.xml files.
 -   SEO meta tags for Open Graph / Facebook.
 -   SEO meta tags for Twitter.
+
 
 
 
