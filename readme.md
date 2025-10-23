@@ -1,11 +1,11 @@
-# An overview of the project
+# ✨An overview of the project
 
 This project is a recent Computer Science graduate's engaging online portfolio showcasing their coding projects, skill
 and experience to potential employers. The portfolio includes interactive features, a mobile responsive design, and
 integrated SEO optimization. Also designed to demonstrate coding abilities and understanding of web development best
 practices.
 
-# Instructions for running the project locally
+# ✨Instructions for running the project locally
 
 To run this webpage locally, please read and follow instructions on this readme.txt file.
 
@@ -20,7 +20,7 @@ To run this webpage locally, please read and follow instructions on this readme.
 6. To change the design elements, you can edit the css file according to your preference.
 7. Don't forget to change the content values on the meta tags for SEO optimization.
 
-# A description of interactive features implemented
+# ✨A description of interactive features implemented
 
 ### Hover Effects
 
@@ -49,7 +49,7 @@ To run this webpage locally, please read and follow instructions on this readme.
 -   Section content show/hide options.
 -   Section-title transformation when activated.
 
-# Technologies used
+# ✨Technologies used
 
 -   Project was coded using Phoenix Code, an open source coding application.
     -   [Phoenix Code](https://phcode.io/) 🔗
@@ -63,7 +63,7 @@ To run this webpage locally, please read and follow instructions on this readme.
 -   Project published on Netlify
     -   [Portfolio Live Site](https://johndoescode.netlify.app/) 🔗
 
-# SEO strategies implemented
+# ✨SEO strategies implemented
 
 -   Basic SEO meta tags.
 -   Robots & Crawlers meta tags for googlebot and bingbot.
@@ -71,4 +71,5 @@ To run this webpage locally, please read and follow instructions on this readme.
 -   Implement robot.txt and sitemap.xml files.
 -   SEO meta tags for Open Graph / Facebook.
 -   SEO meta tags for Twitter.
+
 
