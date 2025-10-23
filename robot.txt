@@ -1,0 +1,7 @@
+# robot.txt for John Does Code Portfolio
+
+User-agents: *
+
+Allow: /
+
+Sitemap: https://https://johndoescode.netlify.app/sitemap.xml
