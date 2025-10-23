@@ -7,10 +7,10 @@ practices.
 
 # ✨Project Tree
 📂root  
-   -index.html  
-   -readme.md  
-   -robot.txt  
-   -sitemap.xml  
+   ```-index.html  
+   ```-readme.md  
+   ```-robot.txt  
+   ```-sitemap.xml  
    📂 assets  
    📂css  
    📂js  
@@ -81,6 +81,7 @@ To run this webpage locally, please read and follow instructions on this readme.
 -   Implement robot.txt and sitemap.xml files.
 -   SEO meta tags for Open Graph / Facebook.
 -   SEO meta tags for Twitter.
+
 
 
 
