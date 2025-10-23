@@ -27,6 +27,8 @@ body {
     margin: auto;
     padding: 1rem;
     background: #e6ebff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
 }
 
 .hero-container {
@@ -106,7 +108,7 @@ accent {
     gap: 1rem;
 }
 .project-card {
-    background: rgba(228, 228, 228, 0.98);
+    background: #e6ebff;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
@@ -116,8 +118,10 @@ accent {
 }
 
 .project-card img {
-    height: 100px;
+    width: 100%;
+    height: 100%;
     border-radius: 1px;
+    object-fit: contain;
     cursor: pointer;
 }
 
@@ -129,7 +133,7 @@ accent {
 }
 
 .service-card {
-    background: rgba(215, 215, 215, 0.98);
+    background: #e6ebff;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
@@ -146,7 +150,7 @@ accent {
 }
 
 .skills-card {
-    background: rgba(215, 215, 215, 0.98);
+    background: #e6ebff;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
@@ -207,6 +211,14 @@ accent {
     right: 10px;
 }
 
+.caption {
+    text-align: center;
+    color: #ddd;
+    font-size: 1rem;
+    margin-top: 8px;
+    font-style: italic;
+}
+
 /* Formatting for section */
 .section {
     width: 1100px;
@@ -221,6 +233,7 @@ accent {
     transition:
         transform 1s ease,
         opacity 1s ease;
+    padding-bottom: 2px;
 }
 
 .section-title {
@@ -258,9 +271,9 @@ accent {
     text-orientation: mixed;
     transform: rotate(180deg);
     width: 60px;
-    background: #0078d7;
+    border-radius: 8px;
+    background: #6275848e;
     color: #fff;
-    border-right: 1px solid #005a9e;
 }
 
 .section.active .section-content {
