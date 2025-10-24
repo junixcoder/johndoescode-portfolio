@@ -5,15 +5,27 @@ and experience to potential employers. The portfolio includes interactive featur
 integrated SEO optimization. Also designed to demonstrate coding abilities and understanding of web development best
 practices.
 
-# ✨Project Tree
+# ✨Tree - Project Directory
 📂root  
-   ```-index.html  
-   ```-readme.md  
-   ```-robot.txt  
-   ```-sitemap.xml  
-   📂 assets  
-   📂css  
-   📂js  
+   &nbsp;&nbsp;&nbsp;&nbsp;-index.html  
+   &nbsp;&nbsp;&nbsp;&nbsp;-readme.md  
+   &nbsp;&nbsp;&nbsp;&nbsp;-robot.txt  
+   &nbsp;&nbsp;&nbsp;&nbsp;-sitemap.xml  
+   &nbsp;&nbsp;&nbsp;&nbsp;📂 assets  
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂bgs \
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-images*.* \
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂icons \
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-images*.* \
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂project1 \
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-images*.* \
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂project2 \
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-images*.* \
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂project3 \
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-images*.* \
+   &nbsp;&nbsp;&nbsp;&nbsp;📂css \
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-styles.css \
+   &nbsp;&nbsp;&nbsp;&nbsp;📂js \
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-script.js 
 
 # ✨Instructions for running the project locally
 
@@ -81,6 +93,7 @@ To run this webpage locally, please read and follow instructions on this readme.
 -   Implement robot.txt and sitemap.xml files.
 -   SEO meta tags for Open Graph / Facebook.
 -   SEO meta tags for Twitter.
+
 
 
 
